@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Computer Science 111: Introduction to Computer Science 111</title>
+
+    <meta name="description" content="Teaching Slides for Computer Science 111">
+    <meta name="author" content="Gregory M. Kapfhammer">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night-gkapfham.css" id="theme">
+
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Install Font Awesome and the Google Web fonts -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <section data-background-transition="none" data-background="https://farm2.static.flickr.com/1623/25677176162_ecd7ffb784_z.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1>Computer Science 111:</h1>
+          <h2>Introduction to Computer Science I</h2>
+          <p>Gregory M. Kapfhammer</p>
+          <br /><small><a title="wocintech stock - 34" href="https://flickr.com/photos/wocintechchat/25677176162">wocintech stock - 34</a> flickr photo by <a href="https://flickr.com/people/wocintechchat">wocintechchat.com</a> shared under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons ( BY ) license</a> </small>
+        </section>
+
+        <section>
+          <h1>Color Scheme</h1>
+          <p class="fragment"><b class="orange">Key Concept</b></p>
+          <p class="fragment"><b class="purple">Corresponding Diagram</b></p>
+          <p class="fragment"><b class="green">In-Class Discussion</b></p>
+          <p class="fragment"><b class="red">In-Class Activity</b></p>
+          <p class="fragment"><b class="blue">Details in the Textbook</b></p>
+        </section>
+
+        <section>
+          <h1>Objects and Primitives</h1>
+          <p class="fragment"><b class="orange">Similarities and differences?</b></p>
+          <p class="fragment"><b class="red">Can you create a list for both of these?</b></p>
+          <p class="fragment"><b class="purple">What does this look like in memory?</b></p>
+          <p class="fragment"><b class="orange">Aliases for reference variables</b></p>
+          <p class="fragment"><b class="blue">Refer to Section 3.1 for more details and diagrams!</b></p>
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm1.static.flickr.com/71/219071714_dc5b98c22d_o.jpg" style="">
+        </section>
+
+        <section data-background-transition="none" data-background="http://farm1.static.flickr.com/71/219071714_dc5b98c22d_o.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="string_manipulation">String Manipulation</h1>
+          <p class="fragment"><b class="green">Real world examples of string processing?</b></p>
+          <p class="fragment"><b class="orange">Purpose of and ways to index a string?</b></p>
+          <p class="fragment"><b class="blue">See Figure 3.1 for the methods provided by String</b></p>
+          <br /><small><a title="Finger dance" href="http://flickr.com/photos/jamesjordan/219071714">flickr photo</a> shared by <a href="http://flickr.com/people/jamesjordan">James Jordan</a> under a <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">Creative Commons ( BY-NC-ND ) license</a> </small>
+        </section>
+
+        <section>
+          <h1>Let's Try It!</h1>
+          <p class="fragment">We can write a Java program to learn more about Strings</p>
+          <p class="fragment"><b class="red">Input the program in Listing 3.1 on page 120</b></p>
+          <p class="fragment"><b class="green">Can you explain the output of this program?</b></p>
+          <p class="fragment"><b class="red">Now, change the replacement and the substring!</b></p>
+          <p class="fragment"><b class="red">Work on this programming task with your partner</b></p>
+          <p class="fragment"><b class="red">If you create and fix an error, post the details in Slack!</b></p>
+        </section>
+
+        <section>
+          <h1 id="packages">Packages</h1>
+          <p class="fragment"><b class="green">What is a class library?</b></p>
+          <p class="fragment"><b class="orange">Application programming interface (API)</b></p>
+          <p class="fragment"><b class="green">What are some examples of packages?</b></p>
+          <p class="fragment"><b class="red">Check the online documentation!</b></p>
+          <p class="fragment">Make sure to use an <code>import</code>!</p>
+          <p class="fragment">Let's explore a new package!</p>
+        </section>
+
+        <section data-background-transition="none" data-background="https://c2.staticflickr.com/4/3039/2492039137_b7017fd7fa_o.jpg" style="">
+        </section>
+
+        <section data-background-transition="none" data-background="https://c2.staticflickr.com/4/3039/2492039137_b7017fd7fa_o.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1 id="random_numbers">Random Numbers</h1>
+          <p class="fragment"><b class="orange">Provided by <code>java.util.Random</code></b></p>
+          <p class="fragment"><b class="orange">Calculations based on a seed value</b></p>
+          <p class="fragment"><b class="red">Input, compile, and run the program in Listing 3.2</b></p>
+          <p class="fragment"><b class="red">Just one of the <code>nextInt</code> and <code>nextFloat</code> calls</b></p>
+          <br /><small><a title="Dice" href="http://flickr.com/photos/pure9/2492039137">flickr photo</a> shared by <a href="http://flickr.com/people/pure9">pure9</a> under a <a href="http://creativecommons.org/licenses/by-nc/2.0/">Creative Commons ( BY-NC ) license</a> </small>
+        </section>
+
+        <section>
+          <h1 id="packages">Formatting Output</h1>
+          <p class="fragment">What do you do if the output needs a special format?</p>
+          <p class="fragment"><b class="blue">The <code>DecimalFormat</code> and <code>NumberFormat</code> classes</b></p>
+          <p class="fragment"><b class="orange">You can format correct for currency and percentages!</b></p>
+          <p class="fragment"><b class="blue">See details in the text &mdash; may help on an assignment!</b></p>
+        </section>
+
+
+        <section>
+          <h1 id="packages">Enumerated Types</h1>
+          <p class="fragment"><b class="green">What to do if a variable only has a few possible "types"?</b></p>
+          <p class="fragment">For instance, a letter grade has distinct values</p>
+          <p class="fragment">Or, across the world, seasons have categories</p>
+          <p class="fragment"><b class="orange">You can use enumerated types to define these categories</b></p>
+          <p class="fragment"><b class="blue">See details in the text &mdash; may help on an assignment!</b></p>
+        </section>
+
+        </section>
+
+      </div>
+
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.min.js"></script>
+
+      <script>
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+
+          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+          transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+          // Optional libraries used to extend on reveal.js
+          dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+        });
+
+      </script>
+
+  </body>
+</html>
