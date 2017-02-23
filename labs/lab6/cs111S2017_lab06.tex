@@ -1,0 +1,394 @@
+\input{111pre}
+\begin{document}
+
+\MYTITLE{Lab 6\\Assigned: February 23, 2017\\ Due: March 2, 2017 by 2:30pm}
+
+\subsection*{Objectives}
+\vspace{-0.05in}
+
+Along with enhancing your teamwork skills, you will write a Java program that manipulates strings of Deoxyribonucleic
+acid (DNA) by appropriately using methods from the {\tt java.util.String} and {\tt java.util.Random} classes.
+Additionally, you will explore the fundamental approaches that use Java classes and methods to organize a solution to an
+interdisciplinary problem.
+
+\vspace{-0.05in}
+\subsection*{Important Notes}
+\vspace{-0.05in}
+
+This is another team-based assignment. As in the past assignments, you must work in a team of two during the laboratory
+session and throughout the coming week. You may select your own partner, as long as you are not working with the same
+person from a previous assignment. Since this is the most challenging assignment so far this semester, you and your
+partner should plan your time this week accordingly and work on it incrementally. Please make sure that you use Slack
+and your team's Git repository to collaborate effectively. Remember, divide and conquer!
+
+\vspace{-0.05in}
+\subsection*{General Guidelines for Labs}
+\vspace{-0.05in}
+
+\begin{itemize}
+
+  \itemsep 0in
+
+\item
+{\bf Work on the Alden Hall computers.} If you want to work on a different
+machine, be sure to transfer your programs to the Alden
+machines and re-run them before submitting.
+\item
+{\bf Update your repository often!} You should add, commit,
+and push your updated files each time you work on them.  I will not grade
+your programs until the due date has passed.
+\item
+{\bf Review the Honor Code policy.} You
+may discuss programs with others, but programs that are nearly identical
+to others will be taken as evidence of violating the Honor Code.
+\end{itemize}
+
+\vspace{-0.2in}
+\subsection*{Reading Assignment}
+\vspace{-0.05in}
+
+To learn more about Java strings and random numbers, review Sections 3.1--3.5 in your textbook. To learn more about how
+to create and use Java classes, you may also want to read Sections 4.1 and 4.2, focusing on accepted conventions for
+organizing a class. Finally, you should carefully study the sample program described in the section of this assignment
+called ``{Study A Sample Program}''.
+
+\vspace{-0.05in}
+\subsection*{Create a New Directory and a Java Program}
+\vspace{-0.05in}
+
+You and your partner are responsible for implementing a complete solution to a real-world problem involving the analysis
+of DNA strings in the field of bioinformatics. To start, you and your partner should create a new Git repository hosted
+by Bitbucket. This new repository must adhere to the naming convention {\tt
+<first-partner-username>-<second-partner-username>-cs111S2017-lab6}. After creating the repository with the correct
+name, please share it with each other and with the course instructor. Now, make sure that you can both access this
+repository through Git commands such as {\tt clone}, {\tt pull}, {\tt add}, {\tt commit}, and {\tt push}. Additionally,
+you should make your own {\tt lab6/} directory in your personal repository and make sure that, by the end of the
+laboratory assignment, all of the files that you collaboratively created are also available in this directory. Please
+see the course instructor or one of the teaching assistants if you cannot complete these first two steps.
+
+% See the section called {\tt DNA Manipulation} in this document for the specifics on what you need to do in your {\tt Lab5.java} program.
+
+\vspace{-0.1in}
+\subsection*{Study a Sample Program}
+\vspace{-0.05in}
+
+Go to the shared course repository and pull {\tt StringDemo.java}. Copy this program into the {\tt lab6/} directory
+inside your own {\tt cs111S2017-<your user name>} repository. Open this program and examine it to see what it does.
+Then run it a few times with different input strings. Make sure that both you both can answer all of these questions
+before advancing to the next part of this assignment. \\
+
+\vspace{-0.05in}
+
+\noindent{\bf Questions to Discuss with Your Group Member}
+(your responses are not to be handed in):
+\begin{itemize}
+\item Where is the random number generator {\em declared}?
+\item Suppose you name the random number generator {\tt wilbur} instead of {\tt r}.
+What other lines in the program need to be changed? Why do you have to change these lines?
+\item Where is the scanner {\em declared}?
+\item Suppose you name the scanner {\tt orville} instead of {\tt scan}.
+What other lines in the program need to be changed? Why do you have to change these lines?
+\item
+Suppose the line:
+
+\vspace*{-.2in}
+\begin{center}
+\verb$s1 = s1.toUpperCase();$
+\end{center}
+\vspace*{-.2in}
+
+is changed to:
+
+\vspace*{-.2in}
+\begin{center}
+\verb$s1.toUpperCase();$
+\end{center}
+
+Will the program still correctly display the upper-case version of {\tt s1}?
+\item
+Do the statements {\tt s1.toUpperCase();} and {\tt s1.toLowerCase();}
+change the contents of {\tt s1}? (See previous question for more details about this matter!)
+\item
+Suppose the user types {\tt abcde} when asked to enter a string.
+\begin{itemize}
+\item Write this down with numbers to indicate the positions (indices) of each character.
+\item
+What position number is immediately to the left of the letter {\tt a}?
+\item
+What position number is immediately to the right of the letter {\tt e}?
+\item
+How many different ways are there to insert an ``{\tt x}'' into the string
+{\tt abcde}? List all the position numbers where this {\tt x} could be placed.
+(Don't forget the beginning and end.)
+\item
+According to the book, the {\tt nextInt(num)} method of the {\tt Random}
+class returns a random number in the range 0 to {\tt num - 1}.
+List all the values that could be returned by ``{\tt r.nextInt(5)}''. Please ask the course instructor if you cannot
+make this list.
+\item
+Answer the question in the comment next to the statement ``\verb$location = r.nextInt(len+1);$''.
+\end{itemize}
+\item
+On paper, write down the string {\tt ABCDEFG}, with position numbers
+above the letters.
+\begin{itemize}
+\item
+Underline the portion corresponding to the
+expression:
+\begin{center}
+\verb$"ABCDEFG".substring(0,3)$
+\end{center}
+\item
+Underline the portion corresponding to the
+expression:
+\begin{center}
+\verb$"ABCDEFG".substring(3)$
+\end{center}
+\item
+What string do we get if we evaluate the expression:
+\begin{center}
+\verb$"ABCDEFG".substring(0,3) + "ABCDEFG".substring(3)$
+\end{center}
+\end{itemize}
+Explain, in English words, what the following statement does:
+\begin{center}
+\verb$s2 = s1.substring(0,location) + `x' + s1.substring(location);$
+\end{center}
+\item
+What is the value of the expression \verb$"PQRST".charAt(0)$ ?
+\item
+What is the value of the expression \verb$"PQRST".charAt(2)$ ?
+\item
+What is the value of the expression \verb$"PQRST".charAt(4)$ ?
+\item
+List all possible values that can be returned by the expression
+\verb$r.nextInt(5)$
+\item
+Explain, in English words, what the following statement does:
+\begin{center}
+\verb$c = "PQRST".charAt(r.nextInt(5));$
+\end{center}
+\end{itemize}
+
+\noindent Don't continue with the assignment until you understand the answers to all of these questions!  You can discuss
+these questions with your partner, the teaching assistants, and your instructor.
+
+\vspace{-0.05in}
+\subsection*{Creating a DNA Manipulation Program}
+\vspace{-0.05in}
+
+Bioinformatics is the study of biological phenomena by the use of biology, mathematics, and computer science. One of the
+most important study areas in bioinformatics concerns DNA. Deoxyribonucleic acid is a molecule that encodes the
+genetic instructions (genes) which are used by all known living organisms and many viruses to build the proteins
+required to sustain existence. The genes of DNA are written in the nucleotides; guanine (G), adenine (A), thymine (T),
+and cytosine (C), (chemical compounds) which serve as the alphabet of the genetic language.  Essentially, a DNA string
+is a string consisting of only the letters {\tt A}, {\tt C}, {\tt G}, and {\tt T}, for instance, ``{\tt CAATGTCAC}''.
+These strings encode various genetic traits such as hair color, eye color, and many others.
+
+Each DNA string has a {\em complement} formed by replacing each code letter by its complementary code. {\tt A} and {\tt
+T} are complements; so are {\tt G} and {\tt C}. Thus, the complement to the string ``{\tt CAATGTCAC}'' is ``{\tt
+GTTACAGTG}''.  DNA sometimes undergoes a {\em mutation}. There are three types of mutation: insertion of a new letter
+somewhere in the string; removal of a letter from the string; and replacement of one letter by another. The following
+table shows the examples of the replacement of letters and the complement of the given sequence. Do you understand what
+took place during each of these replacements? Make sure that you explain the meaning of each row in the table to your
+partner. Of course, you may talk with the course instructor or a teaching assistant or post a question in our Slack team
+if you find these examples of DNA manipulation to be difficult to understand.
+
+\begin{center}
+
+\begin{tabular}{|cc|}
+\hline
+\textbf{Strand} & \textbf{Sequence}\\
+\hline\hline
+$S$      & $\mathtt{ACGTGCCTCTTGGTAC}$ \\
+\hline
+A $\to$ T &  $\mathtt{TCGTGCCTCTTGGTTC}$ \\
+T $\to$ A &  $\mathtt{TCGAGCCACAAGGATC}$ \\
+C $\to$ G &  $\mathtt{TGGAGGGAGAAGGATG}$ \\
+G $\to$ C &  $\mathtt{TGCACGGAGAACCATG}$ \\
+\hline
+$S_{complementary}$ &  $\mathtt{TGCACGGAGAACCATG}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+You and your partner should design and implement a Java program that does the following.  Note that all changes are made
+to the {\em original} input string --- that is, they are not cumulative.
+
+\begin{enumerate}
+
+\item Prompt the user to type in a string of DNA, declare a variable and save the DNA string that the user inputs into a
+  variable called ``{\tt dnaString}''.
+
+\item Print the complement of {\tt dnaString}, appropriately labeled.  (Hint: use several applications of the String
+  class's ``{\tt replace}'' method. For example, if I want to replace all characters `A' with characters `T' in the
+  String variable {\tt dnaString}, then I will say {\tt dnaString.replace(`A',`T');}, but there's still a trick in this
+  case of getting the complement!)
+
+Another hint regarding the trick: As you make your substitutions to get your complementary string, remember that you are
+replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make our complementary sequence ($S_{complementary}$).
+Do not simply perform such substitution directly because you will be unable to figure out which \emph{T}'s were original
+\emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can check your complementary
+sequence from the website  (using the \emph{Complement} option after you enter your sequence): \url{http://arep.med.harvard.edu/labgc/adnan/projects/Utilities/revcomp.html}.
+
+\item[NOTE:]
+
+The next three parts of your program will also use Java's {\tt java.util.Random} class. You may want to read about the
+{\tt Random} class at the end of this document to understand the concepts behind the {\tt Random} class better; you may
+also ask your instructor for help with this Java class.
+
+\item \begin{sloppypar} Perform a random mutation consisting of inserting a randomly-chosen extra letter into {\tt
+  dnaString}; it must be one of the four ``allowed'' letters for DNA. Print this, ensuring that it is appropriately
+labeled and identifying the position of the insertion and the letter inserted. \end{sloppypar}
+
+\item Perform a random mutation consisting of removing a letter from a randomly-chosen position in the {\tt dnaString}.
+  Once again, display this in the terminal window, making sure that it is appropriately labeled and identifying the
+  position of the insertion and the letter removed.
+
+\item Perform a random mutation consisting of altering a single letter from a randomly-chosen position in {\tt
+  dnaString}; it must be changed to a randomly-chosen letter from the set of allowed letters for DNA. Print it,
+  appropriately labeled and identifying the position of the replacement, the new letter, and the letter it replaces.
+  This is the last output your program must perform.
+
+\end{enumerate}
+
+The following gives two sample runs of a previously implemented version of the program. You will get different values,
+of course, since the changes are random, but the structure of the output will be the same. Please see the course
+instructor if you do not understand this program's output.
+
+\begin{verbatim}
+     aldenv5:lab6 jjumadinova$ java ManipulateDNA
+     Janyl Jumadinova
+     Lab 6
+     Thu Sep 30 12:51:58 EDT 2015
+
+     Enter a string containing only C, G, T, and A: actg
+     Complement of ACTG is TGAC
+     Inserting T at position 0 gives TACTG
+     Deleting from position 1 gives ATG
+     Changing position 2 gives ACGG
+\end{verbatim}
+
+\begin{verbatim}
+     aldenv5:lab6 jjumadinova$ java ManipulateDNA
+     Janyl Jumadinova
+     Lab 6
+     Thu Sep 30 12:52:58 EDT 2015
+
+     Enter a string containing only C, G, T, and A: actg
+     Complement of ACTG is TGAC
+     Inserting G at position 0 gives GACTG
+     Deleting from position 0 gives CTG
+     Changing position 0 gives ACTG
+\end{verbatim}
+
+In the second example, nothing was changed in the last line---the {\tt ManipulateDNA} program randomly replaced the
+letter ``{\tt A}'' with the letter ``{\tt A}''!  This behavior is acceptable.
+
+\vspace{-0.05in}
+\subsection*{Additional Program Requirements}
+\vspace{-0.05in}
+\begin{itemize}
+
+\item As in past assignments, make sure your program prints the names of both of your team members, the lab number, and
+  the date as the first few output lines in the terminal.
+
+\item Make sure your program contains the comment header with the honor pledge, the names of all team members, lab
+  number, date, and the purpose of the program.
+
+\item Make sure you document your program properly, by using comments throughout your program whenever appropriate; you
+  and your partner should both understand the code's comments.
+
+\item Make sure your output in the terminal window is neat (e.g., no missing spaces) and that the source code of your
+  Java program is precisely formatted (e.g, indenting and blank spaces).
+
+\end{itemize}
+
+\vspace{-0.25in}
+\subsection*{Summary of the Required Deliverables}
+\vspace{-0.05in}
+
+In addition to turning in printed and signed versions, for this assignment you are invited to submit electronic versions
+of the following deliverables through the Bitbucket repository that you created for your team. As you complete this
+step, you should make sure that you created a {\tt lab6/} directory within this Git repository.  Then, you can save all
+of the required deliverables in the {\tt lab6/} directory---please see the course instructor or a teaching assistant if
+you are not able to create your directory properly. Please make sure that, along with keeping the files in your team's
+Git repository, that you also save and commit the file to your individual course repository; this will help you as you
+are reviewing for upcoming quizzes and examinations in this course.
+
+\vspace*{-.1in}
+\begin{enumerate}
+
+  \itemsep0in
+
+  \item A completed, properly commented, and formatted {\tt ManipulateDNA.java} program.
+
+  \item An output document containing at least \textbf{three different} outputs obtained after running {\tt
+    ManipulateDNA} in the terminal window at least three times.
+
+  \item A document describing the strategy your team developed for completing this assignment and the work each team
+    member has completed. While the {\tt ManipulateDNA} program and the output file have to be the same for both members
+    of the same team, each of you should forthrightly include any challenges that you individually faced in this document.
+
+\end{enumerate}
+\vspace{-0.1in}
+
+Share your program, the output file, and the document describing your team work with me through your Git repository by
+correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git push}'' commands. When you are done, please
+ensure that the Bitbucket Web site has a {\tt lab6/} directory in your two repositories with the two files called {\tt
+ManipulateDNA.java}, {\tt output}, and {\tt report}. You should see the course instructor if you have any questions
+about assignment submission.
+
+\vspace{-0.125in}
+\subsection*{A Quick Review of Random Number Generation}
+\vspace{-0.05in}
+
+To generate random numbers, we need an object of the {\tt Random} class.  You can name this variable anything you want
+--- ``{\tt rand}'' or ``{\tt random}'' are acceptable names, but others will work as well. To create a new random number
+generator named {\tt rand}, be sure to import the {\tt Random} class:
+
+\vspace{-0.1in}
+\begin{center}
+\verb$ import java.util.Random;$
+\end{center}
+\vspace{-0.1in}
+
+\noindent
+and then create an instance of this class in the following fashion:
+
+\vspace{-0.1in}
+\begin{center}
+\verb$Random rand = new Random();$
+\end{center}
+\vspace{-0.1in}
+
+The three most useful methods in the {\tt Random} class are {\tt nextInt}, {\tt nextFloat}, and {\tt nextDouble}. If
+{\tt rand} is the name of our random number generator (it can be called something else) and {\tt n} is a positive
+integer, {\tt rand.nextInt(n)} produces an {\tt int} in the range 0, \ldots, {\tt n}-1 and {\tt rand.nextDouble()} and
+{\tt rand.nextFloat()} produce a {\tt double} and a {\tt float} respectively in the range from 0 to 1 (not including 1).
+By being clever, we can get different ranges --- here are a few examples! In the Java code, assume {\tt i} is an {\tt
+int} variable, {\tt d} is a {\tt double} variable, and {\tt rand} is an object of the {\tt Random} class.
+
+\begin{center}
+\begin{tabular}{p{2.5in}p{3.5in}}
+\multicolumn{1}{c}{\bf Desired Range} & \multicolumn{1}{c}{\bf Java
+Statement}\\\hline
+0, 1, 2, 3, 4, 5 & \verb$i = rand.nextInt(6);$\\
+10, 11, \ldots, 19, 20 & \verb$i = rand.nextInt(11) + 10;$\\
+-5, -4, -3, \ldots, 4, 5 & \verb$i = rand.nextInt(11) - 5;$\\
+0, 3, 6, 9, 12 & \verb$i = 3 * rand.nextInt(5);$\\
+-1, 1 & \verb$i = 2 * rand.nextInt(2) - 1;$\\
+$0 \leq d < 1$ & \verb$d = rand.nextDouble();$\\
+$0 \leq d < 10$ & \verb$d = 10 * rand.nextDouble();$\\
+$-5 \leq d < 5$ & \verb$d = 10 * rand.nextDouble() - 5;$\\
+0.0, 0.1, 0.2, \ldots, 0.9, 1.0 & \verb$d = rand.nextInt(11)/10.0;$
+\end{tabular}
+\end{center}
+
+% You can also use random numbers to do other creative things, for example pick out characters randomly. Let's say I want
+% to pick out a random letter out of a first name, I can first create and initialize a variable {\tt{String professorName =
+% "Janyl";}} Then I can generate a random number between $0$ and $4$ and save it into a variable of type {\tt int} as
+% {\tt{ int randomNumber = rand.nextInt(5)}}. Finally, I  use {\tt{charAt}} method to select the character at a position
+% created by the random number generator as {\tt{professorName.charAt(randomNumber)}}.
+
+\end{document}
