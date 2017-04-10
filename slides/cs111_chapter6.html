@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Computer Science 111: Introduction to Computer Science 111</title>
+
+    <meta name="description" content="Teaching Slides for Computer Science 111">
+    <meta name="author" content="Gregory M. Kapfhammer">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night-gkapfham.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow&#45;night&#45;bright.css">         -->
+    <!-- <link rel="stylesheet" href="lib/css/tomorrow&#45;night&#45;bright.css"> -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Install Font Awesome and the Google Web fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <section data-background-transition="none" data-background="https://farm2.static.flickr.com/1623/25677176162_ecd7ffb784_z.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1>Computer Science 111:</h1>
+          <h2>Introduction to Computer Science I</h2>
+          <p>Gregory M. Kapfhammer</p>
+          <br /><small><a title="wocintech stock - 34" href="https://flickr.com/photos/wocintechchat/25677176162">wocintech stock - 34</a> flickr photo by <a href="https://flickr.com/people/wocintechchat">wocintechchat.com</a> shared under a <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons ( BY ) license</a> </small>
+        </section>
+
+        <section>
+          <h1>Color Scheme</h1>
+          <p class="fragment"><b class="orange">Key Concept</b></p>
+          <p class="fragment"><b class="purple">Corresponding Diagram</b></p>
+          <p class="fragment"><b class="green">In-Class Discussion</b></p>
+          <p class="fragment"><b class="red">In-Class Activity</b></p>
+          <p class="fragment"><b class="blue">Details in the Textbook</b></p>
+        </section>
+
+        <section>
+          <h1 id="switch_statements">Switch Statements</h1>
+          <p class="fragment"><b class="orange">An alternative to using if statements</b></p>
+          <p class="fragment">Cannot encode complex boolean expressions</p>
+          <p class="fragment">Sometimes simpler for a programmer to understand</p>
+          <p class="fragment"><b class="green">Which approach do you prefer? Why did you pick it?</b></p>
+          <p class="fragment"><b class="blue">See Section 6.1 for more details!</b></p>
+        </section>
+
+        <section>
+          <h1 id="do_statements">Do statements</h1>
+          <p class="fragment"><b class="blue">Please see page 274 for an example!</b></p>
+          <p class="fragment"><b class="red">Work with a partner to compare while and do-while loops</b></p>
+          <p class="fragment"><b class="green">What is the key difference?</b></p>
+          <p class="fragment"><b class="green">How do pick between these options?</b></p>
+          <p class="fragment"><b class="green">Can you draw a picture to visualize their execution?</b></p>
+          <p class="fragment"><b class="purple">Visualize these loops with a diagram</b></p>
+        </section>
+
+        <section>
+          <h1 id="for_statements">For Statements</h1>
+          <p class="fragment"><b class="green">When is it best to use a while loop?</b></p>
+          <p class="fragment">What if we know the number of iterations?</p>
+          <p class="fragment">We should try to use the for loop!</p>
+          <p class="fragment"><b class="green">What is the structure of a for loop?</b></p>
+          <p class="fragment"><b class="purple">Visualize the for loop with a diagram</b></p>
+        </section>
+
+        <section>
+          <h1 id="finding_multiples">Finding Multiples</h1>
+          <p class="fragment"><b class="red">Run the <code>git pull</code> command!</b></p>
+          <p class="fragment"><b class="red">Compile the Multiples.java program</b></p>
+          <p class="fragment"><b class="red">Run this program like it was on page 282</b></p>
+          <p class="fragment"><b class="red">Try five different inputs for this program</b></p>
+          <p class="fragment"><b class="green">How does this program use for loops?</b></p>
+        </section>
+
+        <section>
+          <h1 id="printing_stars">Let's Try It!</h1>
+          <p class="fragment"><b class="red">Create a program called <code>PrintStatusBar.java</code></b></p>
+          <p class="fragment"><b class="red">The program should accept two command-line arguments</b></p>
+          <p class="fragment"><b class="red">The first input should be the number of printed symbols</b></p>
+          <p class="fragment"><b class="red">The second input should be the printed symbols</b></p>
+          <p class="fragment"><b class="red">Print the specified number of symbols in the terminal</b></p>
+          <p class="fragment"><b class="green">Can you compile and run this program?</b></p>
+          <p class="fragment"><b class="green">What output does it produce?</b></p>
+        </section>
+
+        <section>
+          <h1 id="printing_stars">Printing Stars</h1>
+          <p class="fragment"><b class="red">Make sure you ran the <code>git pull</code> command!</b></p>
+          <p class="fragment"><b class="red">Find the Stars.java program</b></p>
+          <p class="fragment"><b class="green">Can you compile and run this program?</b></p>
+          <p class="fragment"><b class="green">What output does it produce?</b></p>
+          <p class="fragment"><b class="red">Change the MAX_ROWS variable</b></p>
+          <p class="fragment"><b class="red">Recompile the program</b></p>
+          <p class="fragment"><b class="green">How does the output change? Why?</b></p>
+        </section>
+
+        <section>
+          <h1 id="review_of_iteration_constructs">Iteration Constructs</h1>
+          <p class="fragment"><b class="orange">Three basic loop statements are functionally equivalent</b></p>
+          <p class="fragment"><b class="green">What if we want to run the loop body at least one time?</b></p>
+          <p class="fragment"><b class="green">What if we know the number of times iteration will occur?</b></p>
+          <p class="fragment"><b class="green">What if we want to use an <code>Iterator</code>?</b></p>
+          <p class="fragment"><b class="blue">Make sure that you understand the trade-offs!</b></p>
+        </section>
+
+        <section>
+          <h1 id="what_is_an_array?"><b class="green">Any questions about iteration constructs?</b></h1>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
