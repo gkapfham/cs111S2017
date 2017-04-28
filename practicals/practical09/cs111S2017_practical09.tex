@@ -1,0 +1,59 @@
+\input{111pre}
+\begin{document}
+
+\MYTITLE{Practical 9 \\ April 28, 2017 \\ Due in Bitbucket by midnight on the day of your practical \\ ``Checkmark'' grade}
+
+\vspace*{-.2in}
+\subsection*{Summary}
+\vspace*{-.05in}
+
+In this practical assignment, you will explore an already implemented Java program that causes various types of
+exceptions to be thrown. As you modify the program, you will uncomment certain sections of it and then observe, record,
+and comment on the output that is produced. In addition, you will add some source code to the program that causes a new
+type of exception to be thrown. Finally, you will continue to practice using a Git repository hosted by Bitbucket.
+
+\vspace*{-.15in}
+\subsection*{Review the Textbook}
+\vspace*{-.05in}
+
+To learn more about the concepts associated with exception handling in the Java programming language, please study the
+content in Chapter 11. In particular, make sure that you understand the purpose of exceptions, the messages displayed in
+the terminal when an exception is uncaught, and the structure and meaning of the {\tt try-catch-finally} blocks used in
+Java programs.
+
+\vspace*{-.15in}
+\subsection*{Using and Extending a Program that Throws Exceptions}
+\vspace*{-.05in}
+
+Please return to the ``share'' repository for this course and type the command ``{\tt git pull}''. Now, please find the
+``{\tt practical09/}'' directory and study this source code. After reviewing the provided source code file, please
+compile and run the ``{\tt ExceptionExample.java}'' program. At the outset, you will see that this program does not
+throw any exceptions at all. So, what you should do next is to incrementally uncomment each of the calls to the {\tt
+throwsExceptions} method and observe and record the output from the program. Each time the program throws a different
+exception, make sure that you understand why it does so. Next, you will notice that, in certain cases, the program does
+not output a full ``stack trace'' that prints out in the terminal window which exception is thrown. As such, you should
+add code to the catch blocks of {\tt ExceptionExample} that can print the stack trace. Next, you must add a new code
+segment that will cause the program to throw a new type of exception. Please submit the modified, and fully commented,
+version of the {\tt ExceptionExample} in your own Git repository. Finally, you must create a file called {\tt
+exception\_output} that records the output from your various runs of the program; please include a run showing your new
+exception.
+
+\vspace*{-.15in}
+\subsection*{General Guidelines for Practical Sessions}
+\vspace*{-.05in}
+
+\begin{itemize}
+  \itemsep 0in
+
+\item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
+  did or did not complete the work and submit something to the Bitbucket repository.
+
+\item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
+  time you work on them, always including descriptive messages about each code change.
+
+\item {\bf Review the Honor Code Policy on the Syllabus.} Please remember that source code that is nearly identical to
+  the work of others will be taken as evidence of violating the \mbox{Honor Code}.
+
+\end{itemize}
+
+\end{document}
