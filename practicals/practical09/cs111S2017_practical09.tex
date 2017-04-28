@@ -3,7 +3,7 @@
 
 \MYTITLE{Practical 9 \\ April 28, 2017 \\ Due in Bitbucket by midnight on the day of your practical \\ ``Checkmark'' grade}
 
-\vspace*{-.2in}
+\vspace*{-.4in}
 \subsection*{Summary}
 \vspace*{-.05in}
 
@@ -29,14 +29,19 @@ Please return to the ``share'' repository for this course and type the command `
 ``{\tt practical09/}'' directory and study this source code. After reviewing the provided source code file, please
 compile and run the ``{\tt ExceptionExample.java}'' program. At the outset, you will see that this program does not
 throw any exceptions at all. So, what you should do next is to incrementally uncomment each of the calls to the {\tt
-throwsExceptions} method and observe and record the output from the program. Each time the program throws a different
-exception, make sure that you understand why it does so. Next, you will notice that, in certain cases, the program does
-not output a full ``stack trace'' that prints out in the terminal window which exception is thrown. As such, you should
-add code to the catch blocks of {\tt ExceptionExample} that can print the stack trace. Next, you must add a new code
-segment that will cause the program to throw a new type of exception. Please submit the modified, and fully commented,
-version of the {\tt ExceptionExample} in your own Git repository. Finally, you must create a file called {\tt
-exception\_output} that records the output from your various runs of the program; please include a run showing your new
-exception.
+throwsExceptions} method and observe and record the output from the program. The idea is that you will uncomment a
+method call in {\tt main}, compile and run the program, observe and understand the program's output, comment out that
+line again, and then move onto the next line of code in the program's {\tt main} method.
+
+Each time the program throws a different exception, make sure that you understand why it does so. Next, you will notice
+that, in certain cases, the program does not output a full ``stack trace'' that prints out in the terminal window which
+exception is thrown. As such, you should add code to the catch blocks of {\tt ExceptionExample} that can print the stack
+trace. Next, you must add a new code segment that will cause the program to throw a different type of Java exception.
+Please submit the modified, and fully commented, version of the {\tt ExceptionExample} in your own Git repository.
+Finally, you must create a file called {\tt exception\_output} that records the output from your various runs of the
+program; please include a run showing your new exception.
+
+% As you are completing this practical assignment, please adhere to the following guidelines:
 
 \vspace*{-.15in}
 \subsection*{General Guidelines for Practical Sessions}
@@ -51,8 +56,8 @@ exception.
 \item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
   time you work on them, always including descriptive messages about each code change.
 
-\item {\bf Review the Honor Code Policy on the Syllabus.} Please remember that source code that is nearly identical to
-  the work of others will be taken as evidence of violating the \mbox{Honor Code}.
+% \item {\bf Review the Honor Code Policy on the Syllabus.} Please remember that source code that is nearly identical to
+%   the work of others will be taken as evidence of violating the \mbox{Honor Code}.
 
 \end{itemize}
 
